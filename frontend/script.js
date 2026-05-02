@@ -1,16 +1,14 @@
 // --- START OF FILE frontend/script.js ---
 
-// We leave this empty! The browser will automatically use localhost OR your Cloudflare URL.
 const API_BASE_URL = ""; 
 
-// 1. Load or Create Session ID from localStorage
+// 1. Session & History Setup
 let sessionId = localStorage.getItem("sessionId");
 if (!sessionId) {
     sessionId = "user_" + Math.random().toString(36).substring(2, 10);
     localStorage.setItem("sessionId", sessionId);
 }
 
-// 2. Load Chat History from localStorage
 let chatHistory = JSON.parse(localStorage.getItem("chatHistory")) ||[];
 
 const chatBox = document.getElementById("chat-box");
@@ -18,7 +16,7 @@ const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-btn");
 const resetButton = document.getElementById("reset-btn");
 
-// Helper to render UI and scroll to bottom
+// 2. Render helper
 function addMessageToUI(sender, text) {
     const msgDiv = document.createElement("div");
     msgDiv.classList.add("message", sender);
@@ -28,7 +26,7 @@ function addMessageToUI(sender, text) {
     return msgDiv;
 }
 
-// Render the history when the page first loads
+// 3. Initial Load
 function renderHistory() {
     chatBox.innerHTML = "";
     if (chatHistory.length === 0) {
@@ -38,31 +36,27 @@ function renderHistory() {
     }
 }
 
-// RESTART BUTTON LOGIC
+// 4. Restart Button Logic
 if (resetButton) {
     resetButton.addEventListener("click", () => {
-        // Clear the memory
         localStorage.removeItem("chatHistory");
         localStorage.removeItem("sessionId");
-        
-        // Generate a new user session for telemetry
         sessionId = "user_" + Math.random().toString(36).substring(2, 10);
         localStorage.setItem("sessionId", sessionId);
-        
-        // Reset the UI
         chatHistory =[];
         renderHistory();
     });
 }
 
+// 5. Send Message Logic
 async function sendMessage() {
     const text = userInput.value.trim();
     if (!text) return;
 
-    // Save the past history to send to the backend BEFORE we add the new message
+    // Snapshot history before adding the new message
     const pastHistory = [...chatHistory]; 
 
-    // Add user message to UI and History
+    // Render User text instantly
     addMessageToUI("user", text);
     chatHistory.push({ role: "user", content: text });
     localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
@@ -70,7 +64,7 @@ async function sendMessage() {
     userInput.value = "";
     sendButton.disabled = true;
 
-    // Create an empty bubble for the bot's response
+    // Create an empty bot bubble
     const botMessageDiv = addMessageToUI("bot", "");
     let fullBotResponse = "";
 
@@ -81,7 +75,7 @@ async function sendMessage() {
             body: JSON.stringify({ 
                 session_id: sessionId, 
                 text: text,
-                history: pastHistory // <--- Send memory to the LLM!
+                history: pastHistory
             })
         });
 
@@ -89,7 +83,6 @@ async function sendMessage() {
 
         const reader = response.body.getReader();
         const decoder = new TextDecoder("utf-8");
-        
         let done = false;
         let buffer = ""; 
         
@@ -113,16 +106,18 @@ async function sendMessage() {
                                 done = true;
                                 break;
                             }
-                            botMessageDiv.innerText += data.chunk;
-                            fullBotResponse += data.chunk; // Build the full string
+                            fullBotResponse += data.chunk; 
+                            botMessageDiv.innerText = fullBotResponse; // Update bubble text
                             chatBox.scrollTop = chatBox.scrollHeight;
-                        } catch (e) {}
+                        } catch (e) {
+                            console.error("JSON Parse Error:", e);
+                        }
                     }
                 }
             }
         }
         
-        // Stream is complete! Save the Bot's final response to localStorage
+        // Save the final response
         chatHistory.push({ role: "bot", content: fullBotResponse });
         localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
 
@@ -135,12 +130,13 @@ async function sendMessage() {
     }
 }
 
+// 6. Listeners
 sendButton.addEventListener("click", sendMessage);
 userInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") sendMessage();
 });
 
-// Boot up the UI!
+// Boot UI
 window.onload = renderHistory;
 
 // --- END OF FILE ---
