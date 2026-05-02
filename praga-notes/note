@@ -1,0 +1,54 @@
+AI
+
+1. API
+
+*Application programming interface is used to connect applications using an API key installed any one or all devices. It is used to retrieve data from one application to another, this is done by an API key. Example: Uber app includes 3 applications programs, One to track ur geographic live location, another to process payment and the last one to handle feedback. Three of these programs are connected on one Interface using api.
+
+2. LLMs
+
+*Large Language Models are part of a foundation model, are pre-trained on large amounts of data with self-supervision which means that the model learns from patterns in the data in a way that produces adaptable outputs. 
+
+#Components of an LLM
+
+I. Data:  Large Language models are trained on large datasets of text, such as books, articles and conversations. Parameter is a value that a model can change independently as it learns, the more parameters a model has, the more complex it can be.
+
+II. Architecture: Is a neural network, for GPT(Generative Pre-trained Transformer) this is a Transformer, the transformer architecture enables the model to handle sequences of data like sentences or lines of code. Transformers are designed to understand the context of each word in a sentence by considering it in relation to every other word. This allows the model to build a comprehensive understanding of the sentence structure and meaning of the words in it. 
+
+III. Training: Then, the architecture is trained on all the large amounts of gathered data. During training the model learns to predict the next word in the sentence. For ex: when the user types The school is, the model will start to predict with something like insect, and after each iteration, the model adjusts its internal parameters and try to reduce the differences between the predictions and the actual outcome. The model repeats this until it can generate full meaningful sentences. 
+
+IV .Fine Tuning: Models can be@ fine tuned on a smaller, specific dataset. It’s done so that the model can perform a specific task more accurately. This is what allows a model to become an expert at a specific task. 
+
+3. Business applications:-
+
+# it is used as chatbots to service different kinds of customers’ queries.
+# Used for Content Creating
+# Development of Software 
+
+4. Vector Embeddings
+
+# Vector Embeddings are used to represent text as numbers or numerical vectors in a way which captures the contextual information of words. Words with similar meaning are positioned close to each other. 
+
+Natural Language Processing helps machines understand human text
+
+P(A, B) = P (A) * P (B | A)
+This means that probability of A and B equals to probability of A multiplied by probability of B given that A already occurred.
+
+
+Measuring how wrong a model was needs a number this is called the loss function
+
+Surprise(x)= -log_2p(x)
+log_2 means the power to which 2 should be raised to become that number
+Ex-log_2(8)= 3(2*2*2)
+Negative is to ensure that surprise is positive as log_2 of numbers between 0 and 1 is negative.
+
+When you have many possible outcomes, each with a probability. The average surprise is called entropy
+
+𝐻 = −∑𝑝(𝑥)ln𝑝(𝑥) 𝑥
+Negative sign is there to ensure that the entropy value is non-negative.
+∑ means to add up all possible values of x
+l = −ln𝑝𝜃(𝑤)
+Loss equals to negative natural logarithm of probability by parameter 𝜃 on w
+
+tokens small levels of unit of text that the model processes
+𝐿(𝜃) = −1/𝑛 ∑ln 𝑝𝜃(𝑤𝑡 ∣ 𝑤1,...,𝑤𝑡−1)
+
