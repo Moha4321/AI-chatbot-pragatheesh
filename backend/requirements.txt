@@ -1,0 +1,37 @@
+# =============================================================================
+# requirements.txt
+# AI Chatbot — Junk Food Craving Intervention
+# Python 3.11+ | Apple Silicon M4 | macOS 15+
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# NOTE: mlx and mlx-lm are Apple Silicon only.
+# They will fail silently on non-Apple hardware — do not install on CI runners.
+# =============================================================================
+
+# ── Core ML inference (Apple Silicon only) ───────────────────────────────────
+mlx>=0.16.0
+mlx-lm>=0.16.0
+
+# ── Embedding model ──────────────────────────────────────────────────────────
+# PyTorch with MPS backend (pre-installed on macOS with pip install torch)
+torch>=2.3.0
+sentence-transformers>=3.0.0
+transformers>=4.41.0
+
+# ── Numerical computing ───────────────────────────────────────────────────────
+numpy>=1.26.0
+
+# ── API server ────────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9      # for form data parsing in FastAPI
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0         # for .env config management
+pydantic>=2.7.0              # request/response validation (FastAPI uses this)

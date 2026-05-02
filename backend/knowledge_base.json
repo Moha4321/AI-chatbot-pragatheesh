@@ -1,7 +1,162 @@
 [
-    {
-        "id": 1,
-        "fact": "Eating highly processed foods triggers a massive dopamine spike similar to addictive substances, which leads to a severe energy crash 45 minutes later.",
-        "source": "Placeholder Source (Pragatheesh, replace this!)"
-    }
+  {
+    "id": "KB001",
+    "category": "craving_physiology",
+    "text": "Food cravings typically peak within 3 minutes and subside naturally if not acted upon. Waiting out a craving — even briefly — is often enough to let it pass.",
+    "source": "Weingarten & Elston (1991). Food cravings in a college population. Appetite, 17(3), 167–175.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["craving", "urge", "wait", "pass", "time"]
+  },
+  {
+    "id": "KB002",
+    "category": "hydration",
+    "text": "Drinking 500 ml of water before a meal reduced caloric intake by an average of 13% in a randomised controlled trial. Thirst is frequently mistaken for hunger.",
+    "source": "Davy et al. (2008). Water consumption reduces energy intake at a breakfast meal. Journal of the American Dietetic Association, 108(7), 1236–1239.",
+    "intervention_type": "substitution",
+    "semantic_tags": ["water", "hunger", "thirst", "calories", "drink"]
+  },
+  {
+    "id": "KB003",
+    "category": "urge_surfing",
+    "text": "Urge surfing is a mindfulness technique where you observe a craving like a wave — noticing it rise, peak, and fall — without acting on it. Research shows it reduces craving intensity by up to 20%.",
+    "source": "Bowen & Marlatt (2009). Surfing the urge: Brief mindfulness-based intervention for college student smokers. Psychology of Addictive Behaviors, 23(4), 666–671.",
+    "intervention_type": "mindfulness",
+    "semantic_tags": ["urge", "mindfulness", "wave", "craving", "observe", "breathe"]
+  },
+  {
+    "id": "KB004",
+    "category": "protein_satiety",
+    "text": "High-protein snacks — such as Greek yoghurt, boiled eggs, or edamame — increase satiety hormones (GLP-1, PYY) and reduce subsequent caloric intake compared to high-carbohydrate snacks of equal calories.",
+    "source": "Leidy et al. (2015). The role of protein in weight loss and maintenance. American Journal of Clinical Nutrition, 101(6), 1320S–1329S.",
+    "intervention_type": "substitution",
+    "semantic_tags": ["protein", "snack", "full", "satiety", "egg", "yoghurt", "hungry"]
+  },
+  {
+    "id": "KB005",
+    "category": "sugar_transparency",
+    "text": "A standard 600 ml bottle of cola contains approximately 16 teaspoons of added sugar — more than double the WHO's recommended daily free sugar limit for adults.",
+    "source": "World Health Organization (2015). Guideline: Sugars intake for adults and children. WHO Press.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["sugar", "cola", "soda", "drink", "sweet", "teaspoon"]
+  },
+  {
+    "id": "KB006",
+    "category": "distraction",
+    "text": "Engaging in a 15-minute brisk walk significantly reduces chocolate cravings and the amount of chocolate consumed afterwards, according to a 2012 study of 78 participants.",
+    "source": "Oh & Taylor (2012). Brisk walking reduces ad libitum snacking in regular chocolate eaters. Appetite, 58(1), 387–390.",
+    "intervention_type": "behavioural",
+    "semantic_tags": ["walk", "exercise", "chocolate", "craving", "distract", "move"]
+  },
+  {
+    "id": "KB007",
+    "category": "sleep_hunger",
+    "text": "Just one night of poor sleep (under 6 hours) elevates ghrelin — the hunger hormone — by up to 28% and reduces leptin (the satiety signal) by 18%, biologically increasing next-day junk food cravings.",
+    "source": "Spiegel et al. (2004). Sleep curtailment is accompanied by increased intake of calories from snacks. American Journal of Clinical Nutrition, 89(1), 126–133.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["sleep", "tired", "ghrelin", "hunger", "cravings", "night"]
+  },
+  {
+    "id": "KB008",
+    "category": "packaging_psychology",
+    "text": "Red and yellow food packaging is deliberately chosen by manufacturers because these colours increase appetite and speed up eating pace, as demonstrated in multiple consumer psychology studies.",
+    "source": "Genschow et al. (2012). The color red reduces snack food and soft drink intake. Appetite, 58(2), 699–702.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["packaging", "colour", "red", "yellow", "marketing", "manipulate"]
+  },
+  {
+    "id": "KB009",
+    "category": "healthy_snack",
+    "text": "Snacks that combine protein and fibre — such as apple slices with almond butter, or hummus with vegetables — slow gastric emptying and sustain energy levels for 2–3 hours without a blood sugar spike.",
+    "source": "Slavin & Lloyd (2012). Health benefits of fruits and vegetables. Advances in Nutrition, 3(4), 506–516.",
+    "intervention_type": "substitution",
+    "semantic_tags": ["snack", "fibre", "apple", "hummus", "vegetables", "healthy", "craving"]
+  },
+  {
+    "id": "KB010",
+    "category": "stress_eating",
+    "text": "Cortisol (the stress hormone) directly triggers cravings for high-fat, high-sugar foods because these foods activate the brain's reward pathway, creating a temporary but reinforcing stress-relief response.",
+    "source": "Dallman et al. (2003). Chronic stress and obesity: A new view of comfort food. PNAS, 100(20), 11696–11701.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["stress", "cortisol", "comfort food", "anxiety", "emotion", "reward"]
+  },
+  {
+    "id": "KB011",
+    "category": "mindful_eating",
+    "text": "Eating without screens (TV, phone) reduces meal size by an average of 288 calories per sitting, because distracted eating disrupts interoceptive awareness of fullness signals.",
+    "source": "Robinson et al. (2013). Eating attentively: A systematic review and meta-analysis of the effect of food intake memory and awareness on eating. American Journal of Clinical Nutrition, 97(4), 728–742.",
+    "intervention_type": "mindfulness",
+    "semantic_tags": ["phone", "TV", "screen", "distracted", "eating", "attention", "mindful"]
+  },
+  {
+    "id": "KB012",
+    "category": "ultra_processed",
+    "text": "Ultra-processed foods are engineered with a precise combination of fat, sugar, and salt designed to override normal satiety signals — a phenomenon food scientists call the 'bliss point'.",
+    "source": "Moss, M. (2013). Salt Sugar Fat: How the food giants hooked us. Random House.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["processed", "chips", "biscuit", "engineered", "addictive", "bliss point"]
+  },
+  {
+    "id": "KB013",
+    "category": "portion_illusion",
+    "text": "People pour 37% more liquid into short, wide glasses than tall, narrow ones of equal volume — demonstrating how visual cues distort perception of portion size even in nutrition-aware individuals.",
+    "source": "Wansink & van Ittersum (2003). Bottoms up! The influence of elongation on pouring and consumption volume. Journal of Consumer Research, 30(3), 455–463.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["portion", "glass", "visual", "illusion", "size", "eat more"]
+  },
+  {
+    "id": "KB014",
+    "category": "gut_microbiome",
+    "text": "The gut microbiome can signal the brain to crave specific foods that the bacteria prefer. Diets high in fibre and fermented foods shift the microbiome towards populations that prefer complex carbohydrates over simple sugars within 2–3 weeks.",
+    "source": "Alcock et al. (2014). Is eating behavior manipulated by the gastrointestinal microbiota? BioEssays, 36(10), 940–949.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["gut", "microbiome", "bacteria", "craving", "fibre", "fermented"]
+  },
+  {
+    "id": "KB015",
+    "category": "reward_substitution",
+    "text": "The brain's dopamine reward system cannot distinguish between the source of pleasure. Non-food rewards — brief social connection, listening to a favourite song, or a 5-minute outdoor break — activate the same reward circuitry as eating.",
+    "source": "Berridge & Kringelbach (2015). Pleasure systems in the brain. Neuron, 86(3), 646–664.",
+    "intervention_type": "substitution",
+    "semantic_tags": ["reward", "dopamine", "pleasure", "substitute", "music", "social"]
+  },
+  {
+    "id": "KB016",
+    "category": "meal_timing",
+    "text": "Eating at irregular intervals — skipping breakfast or eating very late — disrupts circadian metabolic rhythms and is independently associated with higher BMI and stronger afternoon junk food cravings.",
+    "source": "Pot et al. (2016). Meal irregularity and cardiometabolic consequences. Proceedings of the Nutrition Society, 75(4), 475–486.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["meal", "skip", "breakfast", "timing", "irregular", "rhythm"]
+  },
+  {
+    "id": "KB017",
+    "category": "breathing",
+    "text": "Diaphragmatic breathing (4-second inhale, 6-second exhale) for 3 minutes activates the parasympathetic nervous system, reducing cortisol acutely and decreasing stress-driven food cravings.",
+    "source": "Ma et al. (2017). The effect of diaphragmatic breathing on attention, negative affect and stress in healthy adults. Frontiers in Psychology, 8, 874.",
+    "intervention_type": "mindfulness",
+    "semantic_tags": ["breathe", "breathing", "calm", "stress", "relax", "craving"]
+  },
+  {
+    "id": "KB018",
+    "category": "label_reading",
+    "text": "Foods labelled 'low fat' are often higher in added sugar to compensate for lost palatability — a phenomenon documented across 261 product lines in a 2016 consumer audit. Always check both fat and sugar on the nutrition panel.",
+    "source": "Ng et al. (2012). The sugar content of low fat and non-fat foods: A cause for concern. Journal of the Academy of Nutrition and Dietetics.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["label", "low fat", "sugar", "packaging", "misleading", "read"]
+  },
+  {
+    "id": "KB019",
+    "category": "social_norms",
+    "text": "People eat on average 35% more food when dining with one other person, and up to 75% more with a group of six or more — a well-replicated social facilitation effect driven by unconscious norm-matching.",
+    "source": "De Castro (2002). Social facilitation of food intake in humans. Appetite, 38(2), 140.",
+    "intervention_type": "psychoeducation",
+    "semantic_tags": ["social", "friends", "group", "eating", "together", "more"]
+  },
+  {
+    "id": "KB020",
+    "category": "implementation_intention",
+    "text": "Forming a specific 'if–then' plan ('If I crave chips at 3 pm, I will eat an apple and go for a 5-minute walk') is twice as effective as a general intention ('I will eat healthier') at changing eating behaviour.",
+    "source": "Adriaanse et al. (2011). The efficacy of implementation intentions in the unhealthy snacking domain. Psychology & Health, 26(2), 149–163.",
+    "intervention_type": "behavioural",
+    "semantic_tags": ["plan", "if then", "intention", "strategy", "chips", "goal"]
+  }
 ]

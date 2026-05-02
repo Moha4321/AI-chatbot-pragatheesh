@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+env/
+
+# LaTeX Build Junk (Keeps your .tex files safe, but ignores the ugly build logs)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+_minted*/
+texput.log
+
+# HuggingFace / MLX local caches (just in case)
+.cache/
