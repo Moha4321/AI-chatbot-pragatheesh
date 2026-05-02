@@ -17,7 +17,7 @@ The system combines **Motivational Interviewing (MI)** with **Retrieval-Augmente
 
 ---
 
-# 🛠 Mac Setup & Installation
+# Mac Setup & Installation
 
 ## 1. Prerequisites
 
@@ -57,7 +57,7 @@ The first time you run the server, the system automatically downloads the requir
 
 ---
 
-# 🚀 Running the System
+# Running the System
 
 ## Step 1: Start the Local API
 
@@ -102,7 +102,7 @@ Share this link with study participants.
 
 ---
 
-# 📊 Research Telemetry (Data Collection)
+# Research Telemetry (Data Collection)
 
 All user interactions are logged locally for post-study statistical analysis.
 
@@ -132,7 +132,7 @@ For ethical compliance:
 
 ---
 
-# 🧪 Running Unit Tests
+# Running Unit Tests
 
 The vector mathematics and RAG logic gates are unit-tested to ensure reproducibility and academic rigor.
 
@@ -142,7 +142,7 @@ pytest backend/ -v
 
 ---
 
-# 📚 Research Context
+# Research Context
 
 This project was developed as part of a Project investigating:
 
@@ -156,7 +156,7 @@ The system is designed for real-time dietary intervention research while maintai
 
 ---
 
-# 📄 License
+# License
 
 ```text
 MIT License
